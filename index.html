@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topología de Red - Servidores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Topología de Red - Servidores</h1>
+    <div class="grid">
+      <!-- Servidor NAS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon-title">
+            <span class="icon server-icon"></span>
+            <h2 class="card-title">NAS</h2>
+          </div>
+          <button class="info-button" onclick="toggleDetails('nas')">i</button>
+        </div>
+        <p class="card-description">Almacenamiento conectado en red para guardar y compartir archivos en la red local.</p>
+        <a class="card-route">Ruta: 192.168.1.100</a>
+        <div class="card-details" id="nas">
+          <p><strong>Puertos:</strong> 80, 443, 21</p>
+          <p><strong>Servicios:</strong> FTP, HTTP, HTTPS</p>
+        </div>
+      </div>
+      <!-- Servidor Multimedia -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon-title">
+            <span class="icon server-icon"></span>
+            <h2 class="card-title">Multimedia</h2>
+          </div>
+          <button class="info-button" onclick="toggleDetails('multimedia')">i</button>
+        </div>
+        <p class="card-description">Servidor para streaming de contenido multimedia como videos, música y fotos.</p>
+        <div class="card-route">Ruta: 192.168.1.101</div>
+        <div class="card-details" id="multimedia">
+          <p><strong>Puertos:</strong> 80, 443, 1935</p>
+          <p><strong>Servicios:</strong> HTTP, HTTPS, RTMP</p>
+        </div>
+      </div>
+      <!-- Servidor DNS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon-title">
+            <span class="icon server-icon"></span>
+            <h2 class="card-title">DNS</h2>
+          </div>
+          <button class="info-button" onclick="toggleDetails('dns')">i</button>
+        </div>
+        <p class="card-description">Sistema de nombres de dominio que traduce nombres de dominio a direcciones IP.</p>
+        <div class="card-route">Ruta: 192.168.1.102</div>
+        <div class="card-details" id="dns">
+          <p><strong>Puertos:</strong> 53</p>
+          <p><strong>Servicios:</strong> DNS</p>
+        </div>
+      </div>
+      <!-- Servidor DHCP -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon-title">
+            <span class="icon server-icon"></span>
+            <h2 class="card-title">DHCP</h2>
+          </div>
+          <button class="info-button" onclick="toggleDetails('dhcp')">i</button>
+        </div>
+        <p class="card-description">Asigna automáticamente direcciones IP a dispositivos en la red.</p>
+        <div class="card-route">Ruta: 192.168.1.103</div>
+        <div class="card-details" id="dhcp">
+          <p><strong>Puertos:</strong> 67, 68</p>
+          <p><strong>Servicios:</strong> DHCP</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
